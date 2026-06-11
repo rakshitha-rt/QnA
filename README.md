@@ -1,6 +1,6 @@
 # AI Knowledge Assistant
 
-A lightweight RAG assistant that answers questions grounded in uploaded documents and structured data. Supports multi-turn clarification, GraphRAG-style retrieval, and pandas-powered structured analysis.
+A lightweight RAG assistant that answers questions grounded in uploaded documents and structured data. Supports multi-turn clarification, GraphRAG-style retrieval, and pandas-powered structured analysis. [Demo Video ](https://drive.google.com/file/d/15CGS_ClRwngJ9LWeRusOBwQTDSvKFqpi/view?usp=sharing)
 
 ---
 
