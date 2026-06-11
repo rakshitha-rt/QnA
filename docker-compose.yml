@@ -1,0 +1,67 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c 'echo > /dev/tcp/localhost/6333' 2>/dev/null || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      UPLOAD_DIR: /data/uploads
+      SANDBOX_URL: http://sandbox:8001
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: "6333"
+    volumes:
+      - uploads:/data/uploads
+    depends_on:
+      qdrant:
+        condition: service_healthy
+      sandbox:
+        condition: service_started
+    networks:
+      - backend
+      - sandbox_net
+    restart: unless-stopped
+
+  sandbox:
+    build:
+      context: ./sandbox
+      dockerfile: Dockerfile
+    volumes:
+      - uploads:/data/uploads:ro
+    networks:
+      - sandbox_net
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+    restart: unless-stopped
+
+networks:
+  backend:
+    driver: bridge
+  sandbox_net:
+    # internal: no outbound internet. app reaches sandbox; sandbox cannot
+    # reach qdrant, OpenAI, or the internet.
+    internal: true
+
+volumes:
+  qdrant_data:
+  uploads:

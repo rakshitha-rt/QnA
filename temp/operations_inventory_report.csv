@@ -1,0 +1,59 @@
+Branch Operations & Inventory Report — ACME Logistics — Q1 2024 (Jan–Mar)
+Related SOP: SOP-OPS-2024-001 | Related Report: monthly_branch_report.pdf
+,,,,,,,,,,
+SHEET 1: BRANCH MONTHLY SALES SUMMARY,,,,,,,,,,
+Branch,Jan_Sales_INR,Feb_Sales_INR,Mar_Sales_INR,Q1_Total_INR,Q1_Target_INR,Achievement_%,Fill_Rate_%,Avg_Aging_Days,Incidents_Escalated
+Mumbai,4250000,3980000,4620000,12850000,12000000,107.1,96.2,38,3
+Delhi,3870000,4100000,3950000,11920000,12000000,99.3,94.8,42,5
+Chennai,2950000,3200000,3450000,9600000,9000000,106.7,97.1,29,1
+Hyderabad,2200000,2450000,2680000,7330000,7500000,97.7,95.5,51,4
+Pune,1850000,1920000,2100000,5870000,6000000,97.8,93.2,67,7
+,,,,,,,,,,
+SHEET 2: SKU-LEVEL INVENTORY AGING (as of March 31 2024),,,,,,,,,,
+SKU_ID,SKU_Name,Category,Branch,Date_Received,Aging_Days,Units_In_Stock,Unit_Cost_INR,Total_Value_INR,Aging_Status
+SKU-1001,Industrial Bearing Set,Spare Parts,Pune,2024-01-01,90,45,1200,54000,Dead Stock
+SKU-1002,Conveyor Belt 5m,Machinery,Pune,2023-12-15,107,12,8500,102000,Dead Stock
+SKU-1003,Safety Helmet Lot,PPE,Hyderabad,2024-01-20,71,200,350,70000,At-Risk
+SKU-1004,Hydraulic Fluid 20L,Consumables,Hyderabad,2024-02-01,59,80,1500,120000,Aging Stock
+SKU-1005,Forklift Battery,Spare Parts,Delhi,2024-01-10,81,8,22000,176000,At-Risk
+SKU-1006,Packing Tape Roll,Consumables,Mumbai,2024-03-01,30,500,45,22500,Fresh Stock
+SKU-1007,Barcode Scanner,Electronics,Chennai,2024-03-10,21,15,6500,97500,Fresh Stock
+SKU-1008,Pallet Wrap Film,Consumables,Mumbai,2024-02-15,45,300,120,36000,Aging Stock
+SKU-1009,Diesel Generator 5kVA,Machinery,Delhi,2023-12-20,102,2,95000,190000,Dead Stock
+SKU-1010,Warehouse Shelving,Infrastructure,Pune,2024-01-05,86,20,4500,90000,At-Risk
+SKU-1011,Fire Extinguisher,Safety,Chennai,2024-03-15,16,50,2200,110000,Fresh Stock
+SKU-1012,Laptop Dell i5,Electronics,Mumbai,2024-02-28,32,10,55000,550000,Aging Stock
+SKU-1013,Packing Foam Sheets,Consumables,Hyderabad,2024-01-25,66,600,80,48000,At-Risk
+SKU-1014,CCTV Camera Set,Electronics,Delhi,2024-02-10,50,8,12000,96000,Aging Stock
+SKU-1015,Rubber Gloves Box,PPE,Chennai,2024-03-20,11,100,180,18000,Fresh Stock
+SKU-1016,Hand Pallet Truck,Equipment,Pune,2024-01-15,76,5,18000,90000,At-Risk
+SKU-1017,Air Compressor,Machinery,Mumbai,2024-03-05,26,3,42000,126000,Fresh Stock
+SKU-1018,Stretch Wrap Machine,Equipment,Delhi,2024-01-01,90,2,68000,136000,Dead Stock
+SKU-1019,LED Warehouse Light,Infrastructure,Hyderabad,2024-02-20,40,30,3500,105000,Aging Stock
+SKU-1020,UPS Battery Pack,Electronics,Chennai,2024-02-01,59,6,28000,168000,Aging Stock
+,,,,,,,,,,
+SHEET 3: SHIPMENT ESCALATION LOG (Q1 2024),,,,,,,,,,
+Incident_ID,Shipment_ID,Branch,Escalation_Level,Delay_Hours,Root_Cause,Date_Opened,Date_Resolved,Service_Credit_Issued,Responsible_Manager
+INC-001,SHP-10021,Delhi,L2,36,Carrier Vehicle Breakdown,2024-01-08,2024-01-10,No,Rajan Mehta
+INC-002,SHP-10045,Pune,L3,96,Customs Hold - Documentation Error,2024-01-18,2024-01-22,Yes,Priya Sharma
+INC-003,SHP-10089,Hyderabad,L1,18,Traffic - Highway Closure,2024-02-03,2024-02-04,No,Sunita Rao
+INC-004,SHP-10102,Delhi,L2,52,Warehouse Strike (Carrier End),2024-02-11,2024-02-13,No,Rajan Mehta
+INC-005,SHP-10134,Pune,L1,8,Driver Unavailability,2024-02-19,2024-02-19,No,Rajan Mehta
+INC-006,SHP-10178,Hyderabad,L2,44,Flood — Alternate Route Required,2024-03-05,2024-03-07,No,Sunita Rao
+INC-007,SHP-10201,Delhi,L3,110,Regulatory Inspection Hold,2024-03-12,2024-03-17,Yes,Priya Sharma
+INC-008,SHP-10234,Pune,L2,60,Cold Chain Equipment Failure,2024-03-20,2024-03-22,No,Rajan Mehta
+INC-009,SHP-10250,Pune,L3,78,Carrier Insolvency - Emergency Re-route,2024-03-25,2024-03-28,Yes,Priya Sharma
+INC-010,SHP-10261,Hyderabad,L1,15,Incorrect Address - Rescheduled,2024-03-29,2024-03-30,No,Sunita Rao
+,,,,,,,,,,
+SHEET 4: PROCUREMENT REQUESTS — Q1 2024 SUMMARY,,,,,,,,,,
+PR_Number,Department,Vendor,Description,Amount_INR,Tier,Requested_Date,Approved_Date,Status,Approvers
+PR-2024-001,Warehouse Ops,SafetyFirst Pvt Ltd,PPE Bulk Order Q1,185000,B,2024-01-03,2024-01-07,Approved,Rajan Mehta | Ananya Verma
+PR-2024-002,IT,TechPro Solutions,10x Dell Laptops,550000,C,2024-01-10,2024-01-17,Approved,Rajan Mehta | Ananya Verma | Deepak Nair
+PR-2024-003,Maintenance,HydroChem Ltd,Industrial Cleaning Supplies,48000,A,2024-01-15,2024-01-16,Approved,Rajan Mehta
+PR-2024-004,Fleet,DriveRight Motors,2x Delivery Vans,2400000,D,2024-01-20,2024-02-05,Approved,Deepak Nair | Priya Sharma | Legal
+PR-2024-005,Warehouse Ops,ShelfMaster India,Additional Racking Units,95000,B,2024-02-01,2024-02-05,Approved,Sunita Rao | Ananya Verma
+PR-2024-006,IT,CloudHost Inc,Annual Cloud Subscription,320000,C,2024-02-08,2024-02-15,Approved,Rajan Mehta | Ananya Verma | Deepak Nair
+PR-2024-007,Maintenance,PowerGen Ltd,Backup Generator Repair,22000,A,2024-03-01,2024-03-02,Approved,Sunita Rao
+PR-2024-008,Ops,SpeedEx Courier,Emergency Carrier Contract,24500,Emergency,2024-03-14,2024-03-15,Approved,Arjun Pillai
+PR-2024-009,HR,TrainEdge Academy,Staff Training Program,75000,B,2024-03-18,2024-03-22,Approved,Priya Sharma | Ananya Verma
+PR-2024-010,IT,CyberShield Pro,Security Audit Services,450000,C,2024-03-25,Pending,Under Review,Awaiting CFO

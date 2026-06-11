@@ -1,0 +1,295 @@
+================================================================================
+          ACME LOGISTICS — STANDARD OPERATING PROCEDURES MANUAL
+                         Document ID: SOP-OPS-2024-001
+                      Effective Date: January 1, 2024
+                      Review Date:    December 31, 2024
+                      Owner:          Operations Department
+================================================================================
+
+                              TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+  Section 1 — Shipment Escalation Process (Page 1)
+  Section 2 — Procurement Approval Workflow (Page 2)
+  Section 3 — Inventory Management & KPI Definitions (Page 3)
+  Section 4 — Guardrails, Exceptions, and Contact Directory (Page 4)
+================================================================================
+
+PAGE 1 — SECTION 1: SHIPMENT ESCALATION PROCESS FOR DELAYED SHIPMENTS
+================================================================================
+
+1.1 PURPOSE
+-----------
+This section defines the escalation process when a shipment is delayed beyond
+the contracted Service Level Agreement (SLA). Timely escalation prevents
+revenue loss, customer churn, and supply chain disruption.
+
+1.2 SCOPE
+---------
+Applies to all outbound and inbound shipments managed by ACME Logistics across
+all regional branches: Mumbai, Delhi, Chennai, Hyderabad, and Pune.
+
+1.3 DEFINITIONS
+---------------
+- On-Time Delivery (OTD): Shipment received by the customer within the agreed
+  delivery window.
+- Delay Threshold Level 1: Shipment late by 1–24 hours.
+- Delay Threshold Level 2: Shipment late by 24–72 hours.
+- Delay Threshold Level 3: Shipment late by more than 72 hours.
+- ETA: Estimated Time of Arrival.
+
+1.4 ESCALATION TIERS AND RESPONSE TIMELINE
+-------------------------------------------
+
+LEVEL 1 — MINOR DELAY (1–24 hours)
+  Responsible Party : Field Operations Agent
+  Action Required   : Update ETA in the tracking system within 2 hours of
+                      detecting the delay. Notify the customer via automated
+                      SMS/email. Log reason code in the Shipment Management
+                      System (SMS Portal).
+  Escalation Trigger: If delay is not resolved within 12 hours → escalate to
+                      Level 2.
+
+LEVEL 2 — MODERATE DELAY (24–72 hours)
+  Responsible Party : Regional Operations Manager
+  Action Required   : Contact the carrier directly and obtain a confirmed
+                      revised ETA. Send a personal update to the customer
+                      account manager. Initiate a re-routing assessment if
+                      applicable. Document all actions in the SMS Portal under
+                      "Escalation Log."
+  Escalation Trigger: If delay is not resolved within 48 hours → escalate to
+                      Level 3.
+
+LEVEL 3 — CRITICAL DELAY (72+ hours)
+  Responsible Party : VP of Operations + Customer Success Lead
+  Action Required   : Convene a bridge call with the customer within 4 hours.
+                      Evaluate alternative fulfillment options (nearest hub
+                      stock, cross-dock, expedited air freight).
+                      Issue a formal Service Credit Note if OTD breach is
+                      confirmed. File an internal incident report (IR-OPS).
+  Regulatory Note   : If shipment contains regulated goods (pharma, hazmat),
+                      notify the Compliance team immediately regardless of
+                      delay tier.
+
+1.5 ESCALATION FLOWCHART (TEXT REPRESENTATION)
+-----------------------------------------------
+  Shipment Delayed?
+       |
+       ├─ NO  → Continue monitoring, update ETA in system
+       |
+       └─ YES
+            |
+            ├─ 1–24 hrs → Field Agent updates ETA, notifies customer (L1)
+            |        └─ Unresolved 12 hrs → escalate to L2
+            |
+            ├─ 24–72 hrs → Ops Manager contacts carrier, re-routes if needed (L2)
+            |         └─ Unresolved 48 hrs → escalate to L3
+            |
+            └─ 72+ hrs → VP Ops + CS Lead, bridge call, credit note (L3)
+
+1.6 DOCUMENTATION REQUIREMENTS
+--------------------------------
+All escalation actions must be logged in the SMS Portal with:
+  - Shipment ID
+  - Delay tier triggered
+  - Root cause (weather, carrier failure, customs hold, etc.)
+  - Actions taken and timestamps
+  - Resolution date and time
+
+================================================================================
+PAGE 2 — SECTION 2: PROCUREMENT APPROVAL WORKFLOW
+================================================================================
+
+2.1 PURPOSE
+-----------
+This section outlines the end-to-end approval workflow for all procurement
+requests, ensuring financial control, vendor compliance, and audit readiness.
+
+2.2 PROCUREMENT TIERS
+---------------------
+All procurement requests are classified by value to determine the approval path:
+
+  Tier A — Up to ₹50,000     : Department Head approval only
+  Tier B — ₹50,001–₹2,00,000 : Department Head + Finance Manager approval
+  Tier C — ₹2,00,001–₹10,00,000 : Department Head + Finance Manager + CFO
+  Tier D — Above ₹10,00,000  : Full committee review (CFO + MD + Legal)
+
+2.3 STANDARD APPROVAL STEPS
+-----------------------------
+Step 1 — INITIATION
+  The requesting department raises a Purchase Request (PR) in the Procurement
+  Portal. Required fields: item description, quantity, estimated cost, vendor
+  name (or "open tender"), business justification, and required-by date.
+
+Step 2 — DEPARTMENTAL REVIEW (All Tiers)
+  Department Head reviews the request within 2 business days. They verify
+  budget availability against the approved annual budget. If budget is
+  exceeded, the request must include a budget deviation form (BDF-001).
+
+Step 3 — FINANCE REVIEW (Tier B, C, D)
+  Finance Manager validates the cost estimate, checks vendor payment terms,
+  and confirms PO number allocation. Turnaround time: 3 business days.
+
+Step 4 — CFO APPROVAL (Tier C, D)
+  CFO reviews strategic alignment and cash flow impact. Turnaround: 2 business
+  days. CFO may request vendor comparison quotes (minimum 3 quotes for Tier C+).
+
+Step 5 — COMMITTEE REVIEW (Tier D only)
+  Full committee convenes within 5 business days. Minutes must be recorded.
+  Legal reviews contract terms before final sign-off.
+
+Step 6 — PURCHASE ORDER ISSUANCE
+  Upon final approval, the Procurement team issues the official PO via the
+  Procurement Portal. Vendor is notified by email with PO attachment.
+
+Step 7 — GOODS RECEIPT AND THREE-WAY MATCH
+  On delivery, the warehouse team records Goods Receipt Note (GRN). Finance
+  performs a three-way match: PO vs. GRN vs. Vendor Invoice before payment.
+
+2.4 EMERGENCY PROCUREMENT
+--------------------------
+For operational emergencies (e.g., critical spare parts, stoppage situations):
+  - Maximum value without prior approval: ₹25,000
+  - Retrospective approval must be obtained within 24 hours
+  - Emergency PR form (EPR-001) must be filed with root cause explanation
+  - More than 3 emergency PRs per quarter triggers a process review
+
+2.5 VENDOR EMPANELMENT REQUIREMENT
+------------------------------------
+All vendors must be empanelled in the Vendor Master before a PO can be raised.
+New vendor onboarding takes 5–7 business days (KYC, bank details, GST verification).
+
+================================================================================
+PAGE 3 — SECTION 3: INVENTORY MANAGEMENT & KPI DEFINITIONS
+================================================================================
+
+3.1 PURPOSE
+-----------
+This section defines the key inventory KPIs tracked by ACME Logistics and
+provides guidance on data interpretation for operational and management use.
+
+3.2 INVENTORY AGING KPI
+------------------------
+Definition:
+  Inventory Aging measures the number of days a specific Stock Keeping Unit
+  (SKU) has been held in the warehouse without being sold or dispatched.
+
+Formula:
+  Aging Days = Current Date − Date of Stock Receipt
+
+Classification:
+  Fresh Stock   : 0–30 days
+  Aging Stock   : 31–60 days     (flag for review)
+  At-Risk Stock : 61–90 days     (require markdown or transfer proposal)
+  Dead Stock    : 90+ days       (escalate to Inventory Review Committee)
+
+Why It Matters:
+  High aging stock ties up working capital, occupies warehouse space, and risks
+  obsolescence. The Inventory Review Committee meets monthly to review all
+  SKUs with aging > 60 days.
+
+Target Benchmark:
+  Average aging days across all active SKUs should remain below 45 days.
+  Any branch with average aging > 60 days triggers an automatic audit.
+
+3.3 BRANCH SALES PERFORMANCE KPI
+----------------------------------
+Definition:
+  Monthly gross sales value per branch, measured in INR.
+
+Target: Each branch is assigned a monthly sales target at the start of each
+financial year. Performance is tracked weekly and reported in the monthly
+Branch Operations Report (BOR).
+
+3.4 FILL RATE KPI
+-----------------
+Definition:
+  Fill Rate = (Orders Fully Shipped / Total Orders Received) × 100
+
+Target: ≥ 95% fill rate per branch per month.
+A fill rate below 90% for two consecutive months requires a root cause
+analysis and corrective action plan submission.
+
+3.5 STOCK TURN RATIO
+---------------------
+Definition:
+  Stock Turn = (Cost of Goods Sold / Average Inventory Value) × 12 (annualized)
+
+Target: Minimum stock turn of 6× per year for fast-moving categories.
+Slow-moving SKUs (turn < 2×) are reviewed for discontinuation.
+
+3.6 REPORTING CADENCE
+----------------------
+  Daily   : Field agents submit end-of-day stock counts via mobile app.
+  Weekly  : Branch Managers review aging and fill rate dashboards.
+  Monthly : Branch Operations Report (BOR) submitted by 5th of following month.
+  Quarterly: Full inventory audit conducted by Finance + Ops jointly.
+
+================================================================================
+PAGE 4 — SECTION 4: GUARDRAILS, EXCEPTIONS, AND CONTACT DIRECTORY
+================================================================================
+
+4.1 ESCALATION GUARDRAILS
+--------------------------
+The following conditions automatically freeze a shipment and trigger immediate
+compliance notification:
+
+  a) Shipment involving controlled substances or pharma products held at
+     customs for > 12 hours.
+  b) Any shipment flagged with a mismatch between declared weight and actual
+     weight > 5%.
+  c) Customer credit limit exceeded at time of dispatch clearance.
+  d) Carrier blacklisted in the Approved Vendor List (AVL) used for dispatch.
+
+In all above cases: DO NOT release the shipment. Notify the Compliance team
+at compliance@acmelogistics.in within 1 hour.
+
+4.2 PROCUREMENT EXCEPTIONS
+----------------------------
+The following are NOT subject to standard approval workflows:
+  - Utility bill payments and statutory dues (handled by Finance directly)
+  - Petty cash expenses up to ₹5,000 per transaction (submit via Expense Report)
+  - Rental renewals below 5% increase and within existing vendor empanelment
+
+4.3 SENSITIVE DATA HANDLING
+-----------------------------
+All documents containing vendor pricing, contract terms, or customer PII must:
+  - Be stored in the secure DMS (Document Management System) with restricted
+    access (need-to-know basis only).
+  - Not be shared externally without written approval from the Legal team.
+  - Be watermarked before sharing with external parties.
+
+4.4 CONTACT DIRECTORY (KEY ROLES)
+-----------------------------------
+  Role                        | Name             | Email / Ext
+  ----------------------------|------------------|---------------------------
+  VP Operations               | Priya Sharma     | priya.s@acmelogistics.in
+  Regional Ops Manager (West) | Rajan Mehta      | rajan.m@acmelogistics.in
+  Regional Ops Manager (East) | Sunita Rao       | sunita.r@acmelogistics.in
+  CFO                         | Deepak Nair      | deepak.n@acmelogistics.in
+  Finance Manager             | Ananya Verma     | ananya.v@acmelogistics.in
+  Compliance Lead             | Vivek Kumar      | vivek.k@acmelogistics.in
+  Customer Success Lead       | Meera Joshi      | meera.j@acmelogistics.in
+  Procurement Head            | Arjun Pillai     | arjun.p@acmelogistics.in
+
+4.5 DOCUMENT REVISION HISTORY
+-------------------------------
+  Version | Date           | Changed By       | Summary
+  --------|----------------|------------------|------------------------------
+  1.0     | Jan 01, 2023   | Priya Sharma     | Initial release
+  1.1     | Jul 15, 2023   | Rajan Mehta      | Updated L2 escalation SLA
+  2.0     | Jan 01, 2024   | Priya Sharma     | Added procurement Tier D,
+          |                |                  | inventory aging thresholds,
+          |                |                  | and guardrails section
+
+4.6 RELATED DOCUMENTS
+----------------------
+  - operations_inventory_report.csv  : Monthly inventory and sales data
+  - monthly_branch_report.pdf        : Branch performance summary (Q1 2024)
+  - Vendor Empanelment Policy (VEP-001) — available in DMS
+  - Budget Deviation Form (BDF-001)    — available in DMS
+  - Emergency PR Form (EPR-001)        — available in DMS
+
+================================================================================
+                     END OF DOCUMENT — SOP-OPS-2024-001
+              For queries contact: ops-sop@acmelogistics.in
+================================================================================
